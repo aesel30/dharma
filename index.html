@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Lihat jadwal ujian JFT dan SSW terbaru di berbagai kota di Indonesia. Cari tanggal ujian berdasarkan lokasi dan jenis tes." />
+    <meta property="og:title" content="Jadwal Ujian JFT & SSW" />
+    <meta property="og:description" content="Lihat jadwal ujian JFT dan SSW terbaru di berbagai kota di Indonesia." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ayokejepang.com" />
+    <meta name="twitter:card" content="summary" />
+    <title>Jadwal Ujian JFT & SSW</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuMGFYjYChnHWjE+vE+j0eYxN1G/P/s/gX+s1a2C3e45A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <h1>Jadwal Ujian JFT & SSW</h1>
+        <p class="subtitle">Lihat jadwal ujian berdasarkan kota dan jenis ujian</p>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="controls">
+        <div class="control-group">
+          <label for="city">Pilih Kota</label>
+          <select id="city">
+            <option value="all">Semua Kota</option>
+            <option value="bandung-astanaanyar">Bandung Astanaanyar</option>
+            <option value="bandung-wetan">Bandung Wetan</option>
+            <option value="bandung-andir">Bandung Andir</option>
+            <option value="denpasar">Denpasar</option>
+            <option value="jakarta-pademangan">Jakarta Pademangan</option>
+            <option value="jakarta-plaza-sentral">Jakarta Plaza Sentral</option>
+            <option value="jakarta-satrio-tower-a">Jakarta Satrio Tower A</option>
+            <option value="jakarta-satrio-tower-b">Jakarta Satrio Tower B</option>
+            <option value="jakarta-timur">Jakarta Timur</option>
+            <option value="manado">Manado</option>
+            <option value="medan">Medan</option>
+            <option value="semarang">Semarang Banyumanik</option>
+            <option value="semarang">Semarang Tembalang</option>
+            <option value="surabaya">Surabaya</option>
+            <option value="yogyakarta-ngaglik">Yogyakarta Ngaglik</option>
+            <option value="yogyakarta-uii">Yogyakarta UII</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label for="exam-type">Jenis Ujian</label>
+          <select id="exam-type">
+            <option value="all">Semua Jenis Ujian</option>
+            <option value="jft">JFT</option>
+            <option value="ssw">SSW</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="calendar-container" id="bagian-kalender">
+        <div class="calendar-header">
+          <div class="month-year" id="month-year">Mei 2025</div>
+          <div class="nav-buttons">
+            <button class="nav-button prev-month">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button class="nav-button next-month">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div id="calendar-wrapper"></div>
+      </div>
+
+      <div class="legend">
+        <div class="legend-item">
+          <div class="legend-color" style="background-color: var(--jft-color)"></div>
+          <span>Ujian JFT</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background-color: var(--ssw-color)"></div>
+          <span>Ujian SSW</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background-color: var(--primary); border-radius: 50%"></div>
+          <span>Hari Ini</span>
+        </div>
+      </div>
+
+      <div class="reservation-note">Reservasi Ujian via WhatsApp ke <a href="https://wa.me/628158000598" class="whatsapp-link">628158000598</a></div>
+    </div>
+
+    <div id="reservasi-popup" class="popup-overlay">
+      <div class="popup-content">
+        <span class="popup-close">&times;</span>
+        <h2>Butuh Bantuan Reservasi?</h2>
+        <p>Jangan sampai kehabisan slot ujian! Tim kami siap membantu Anda mengamankan tanggal dan lokasi ujian JFT & SSW pilihan Anda.</p>
+        <a href="https://wa.me/628158000598" target="_blank" class="popup-cta-button"> Reservasi via WhatsApp </a>
+      </div>
+    </div>
+    <script src="js/exam-data.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
